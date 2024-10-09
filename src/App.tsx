@@ -33,7 +33,7 @@ function App() {
       <Header title={"Weather country app"}/>
       <HomeSearch>
 
-      <Search search={search} handleSearch={handleSearch} type='text' placeholder='Search...' name='search' />  
+      <Search search={search} handleSearch={handleSearch} type='text' placeholder='Enter your country or city name...' name='search' />  
         
       <Button handleSearchBtn={handleSearchBtn} disabled={loading}>Search</Button>
       </HomeSearch>

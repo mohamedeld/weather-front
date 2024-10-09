@@ -1,16 +1,16 @@
 import React from "react";
 import StyledButton from "./StyledBtn";
 
-interface IProps{
-  children:React.ReactNode;
-  handleSearchBtn:()=>void;
-  disabled:boolean;
+interface IProps {
+  children: React.ReactNode;
+  handleSearchBtn: () => void;
+  disabled: boolean;
 }
 
-const Button = ({children,handleSearchBtn,disabled}:IProps) => {
+const Button = ({ children, handleSearchBtn, disabled }: IProps) => {
   return (
-    
-    <StyledButton  onClick={handleSearchBtn} disabled={disabled}>{children}</StyledButton>
+    <StyledButton
+      onClick={handleSearchBtn} disabled={disabled}>{children}</StyledButton>
   )
 }
 

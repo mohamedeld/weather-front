@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 const StyledInput = styled.input`
   width: 100%;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   padding-right: 28px;
   padding-left: 32px;
   display: block;

@@ -1,3 +1,4 @@
+import React from "react";
 import { NoResult } from "./StyledNoResult";
 
 interface IProps{
@@ -9,4 +10,4 @@ const WeatherNoResult = ({message}:IProps) => {
   )
 }
 
-export default WeatherNoResult
+export default React.memo(WeatherNoResult);
