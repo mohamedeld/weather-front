@@ -1,9 +1,11 @@
+import { NoResult } from "./StyledNoResult";
+
 interface IProps{
   message:string;
 }
 const WeatherNoResult = ({message}:IProps) => {
   return (
-    <p className='no-results'>{message}</p>
+    <NoResult className='no-results'>{message}</NoResult>
   )
 }
 

@@ -1,5 +1,7 @@
 
-import { IWeather } from '../types/weather'
+import React from 'react';
+import { IWeather } from '../../types/weather';
+import { GeoCoords, Main, WeatherContainer } from './StyledWeather';
 
 interface IProps{
   weather:IWeather | null;
@@ -7,32 +9,33 @@ interface IProps{
 
 const WeatherResult = ({weather}:IProps) => {
   return (
-    <><div className='weather-container'>
+    <><WeatherContainer>
       <img
               src={`http://openweathermap.org/img/w/${weather?.weather[0]?.icon}.png`}
               alt="weather status icon"
+              loading='lazy'
               className="weather-icon"
             />
     
-      <main>
+      <Main>
           <h4>{weather?.name}, {" "} {weather?.sys?.country}</h4>
-      <p className="card-text">
+      <p >
 											Temperature: {" "}
 											{weather?.main?.temp} °C
 										</p>
-										<p className="card-text">
+										<p >
 											Weather: {" "}
 											{weather?.weather[0]?.description}
 										</p>
-                    <div className='geo-cords'>
+                    <GeoCoords>
                       <p>Geo coords {" "} 
                           <span>[{weather?.coord?.lon},{weather?.coord?.lat}]</span>
                       </p>
-                    </div>
-      </main>
-    </div>
+                    </GeoCoords>
+      </Main>
+    </WeatherContainer>
     </>
   )
 }
 
-export default WeatherResult
+export default React.memo(WeatherResult);
