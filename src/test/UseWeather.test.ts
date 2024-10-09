@@ -1,7 +1,7 @@
 import { describe,afterEach,it,expect } from 'vitest';
 // src/hooks/__tests__/useWeather.test.ts
 import { renderHook, act } from '@testing-library/react';
-import axios from 'axios';
+// import axios from 'axios';
 import { vi } from 'vitest';
 import toast from 'react-hot-toast';
 import useWeather from '../hooks/useWeather';
@@ -28,7 +28,7 @@ describe('useWeather hook', () => {
   });
 
   it('should set loading to true and fetch weather data successfully', async () => {
-    (axios.get as vi.Mock).mockResolvedValueOnce({ data: mockWeatherData });
+    // (axios.get as vi.Mock).mockResolvedValueOnce({ data: mockWeatherData });
 
     const { result } = renderHook(() => useWeather());
 
@@ -42,7 +42,7 @@ describe('useWeather hook', () => {
   });
 
   it('should handle errors and show toast message', async () => {
-    (axios.get as vi.Mock).mockRejectedValueOnce(new Error('City not found'));
+    // (axios.get as vi.Mock).mockRejectedValueOnce(new Error('City not found'));
 
     const { result } = renderHook(() => useWeather());
 
